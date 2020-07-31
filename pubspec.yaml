@@ -1,0 +1,146 @@
+name: fruts
+description: A new Flutter project.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  sembast:
+  path_provider: ^1.6.7
+  flutter_bloc: ^4.0.0
+  bloc: ^4.0.0
+  auto_size_text: ^2.1.0
+  intl: any
+  intl_translation: any
+  flutter_staggered_grid_view: ^0.3.0
+  uuid: ^2.0.4
+  equatable: ^1.1.1
+  meta: ^1.1.8
+  rxdart:
+  shared_preferences: ^0.5.7
+  path:
+  hydrated_bloc: ^4.1.1
+  json_annotation:
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  json_serializable: 
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+   - images/exotics/ackee.png
+   - images/exotics/chayote.png
+   - images/exotics/durian.png
+   - images/exotics/rambutan.png
+
+   - images/fresh/corn.PNG
+   - images/fresh/cucumber.PNG
+   - images/fresh/egg-plant.PNG
+   - images/fresh/garlic.PNG
+   - images/fresh/red-pepper.PNG
+
+   - images/fruits/apple.PNG
+   - images/fruits/avocado.PNG
+   - images/fruits/banana.PNG
+   - images/fruits/blueberry.png
+   - images/fruits/cherry.png
+   - images/fruits/lemon.PNG
+   - images/fruits/mango.png
+   - images/fruits/orange.PNG
+   - images/fruits/papaya.PNG
+   - images/fruits/pear.png
+   - images/fruits/pineapple.PNG
+   - images/fruits/raspberry.png
+   - images/fruits/strawberry.PNG
+   - images/fruits/tomato.PNG
+
+   - images/nuts/almond-nuts.png
+   - images/nuts/cashew-nuts.png
+   - images/nuts/chestnuts.png
+   - images/nuts/hazelnut.png
+   - images/nuts/peanuts.png
+   - images/nuts/pecan-nuts.png
+   - images/nuts/walnuts.png
+
+   - images/icons/cart.png
+   - images/icons/cart-bag.png
+   - images/icons/delivery-truck.png
+   - images/icons/helmet.png
+   - images/icons/helmet-filled.png
+   - images/icons/shopping-bag.png
+   - images/icons/menu.png
+   - images/icons/search.png
+   - images/icons/settings.png
+   - images/icons/filter.png
+
+   - images/vegs/cabbage.PNG
+   - images/vegs/carrot.PNG
+   - images/vegs/lettuce.PNG
+   - images/vegs/parsely.PNG
+
+   
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: ProductSans
+      fonts:
+        - asset: fonts/ProductSans-Black.ttf
+        - asset: fonts/ProductSans-Bold.ttf
+        - asset: fonts/ProductSans-Light.ttf
+        - asset: fonts/ProductSans-Medium.ttf
+        - asset: fonts/ProductSans-Regular.ttf
+        - asset: fonts/ProductSans-Thin.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

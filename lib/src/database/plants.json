@@ -1,0 +1,888 @@
+{
+    "plants": [
+        {
+            "id": 473531962,
+            "name": "Ackee",
+            "genus": "Blighia",
+            "category": "Category.exotics",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": 11.0
+                },
+                {
+                    "NutritionType.protein": 4.0
+                },
+                {
+                    "NutritionType.fat": 9.0
+                },
+                {
+                    "NutritionType.calories": 140.0
+                },
+                {
+                    "NutritionType.sugar": 4.0
+                }
+            ],
+            "price": 1.99,
+            "image": "images/exotics/ackee.png",
+            "rating": 4.7
+        },
+        {
+            "id": "980980576",
+            "name": "Chayote",
+            "genus": "Sechium",
+            "category": "Category.exotics",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "4.0"
+                },
+                {
+                    "NutritionType.protein": "0.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "19.0"
+                },
+                {
+                    "NutritionType.sugar": "1.0"
+                }
+            ],
+            "price": " 1.99",
+            "image": "images/exotics/chayote.png",
+            "rating": "3.4"
+        },
+        {
+            "id": "649821969",
+            "name": "Durian",
+            "genus": "Durio",
+            "category": "Category.exotics",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "41.0"
+                },
+                {
+                    "NutritionType.protein": "4.0"
+                },
+                {
+                    "NutritionType.fat": "5.0"
+                },
+                {
+                    "NutritionType.calories": "220.0"
+                },
+                {
+                    "NutritionType.sugar": "32.3"
+                }
+            ],
+            "price": "49.99",
+            "image": "images/exotics/durian.png",
+            "rating": 1.2
+        },
+        {
+            "id": "191987582",
+            "name": "Rambutan",
+            "genus": "Nephelium",
+            "category": "Category.exotics",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "10.0"
+                },
+                {
+                    "NutritionType.protein": "3.0"
+                },
+                {
+                    "NutritionType.fat": "2.0"
+                },
+                {
+                    "NutritionType.calories": "69.0"
+                },
+                {
+                    "NutritionType.sugar": "0.0"
+                }
+            ],
+            "price": "0.99",
+            "image": "images/exotics/rambutan.png",
+            "rating": "4.3"
+        },
+        {
+            "id": "378184272",
+            "name": "Corn",
+            "genus": "Zea",
+            "category": "Category.fresh",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "21.0"
+                },
+                {
+                    "NutritionType.protein": "3.0"
+                },
+                {
+                    "NutritionType.fat": "1.0"
+                },
+                {
+                    "NutritionType.calories": "100.0"
+                },
+                {
+                    "NutritionType.sugar": "5.0"
+                }
+            ],
+            "price": "3.59",
+            "image": "images/fresh/corn.PNG",
+            "rating": "4.2"
+        },
+        {
+            "id": "434774537",
+            "name": "Cucumber",
+            "genus": "Cucumis",
+            "category": "Category.fresh",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "3.0"
+                },
+                {
+                    "NutritionType.protein": "0.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "15.0"
+                },
+                {
+                    "NutritionType.sugar": "1.0"
+                }
+            ],
+            "price": "3.99",
+            "image": "images/fresh/cucmber.PNG",
+            "rating": "4.0"
+        },
+        {
+            "id": "373057699",
+            "name": "Eggplant",
+            "genus": "Nightshade",
+            "category": "Category.fresh",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "8.0"
+                },
+                {
+                    "NutritionType.protein": "1.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "33.0"
+                },
+                {
+                    "NutritionType.sugar": "3.0"
+                }
+            ],
+            "price": "4.99",
+            "image": "images/fresh/egg-plant.PNG",
+            "rating": "3.5"
+        },
+        {
+            "id": "563033113",
+            "name": "Garlis",
+            "genus": "Onions",
+            "category": "Category.fresh",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "33.0"
+                },
+                {
+                    "NutritionType.protein": "6.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "149.0"
+                },
+                {
+                    "NutritionType.sugar": "1.0"
+                }
+            ],
+            "price": "2.99",
+            "image": "images/fresh/garlic.PNG",
+            "rating": "3.0"
+        },
+        {
+            "id": "910631637",
+            "name": "Red pepper",
+            "genus": "Capsicum",
+            "category": "Category.fresh",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "4.0"
+                },
+                {
+                    "NutritionType.protein": "1.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "31.0"
+                },
+                {
+                    "NutritionType.sugar": "4.0"
+                }
+            ],
+            "price": "3.49",
+            "image": "images/fresh/red-pepper.PNG",
+            "rating": "2.0"
+        },
+        {
+            "id": "493419443",
+            "name": "Apple",
+            "genus": "Malus",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "11.4"
+                },
+                {
+                    "NutritionType.protein": "0.3"
+                },
+                {
+                    "NutritionType.fat": "0.4"
+                },
+                {
+                    "NutritionType.calories": "52.0"
+                },
+                {
+                    "NutritionType.sugar": "10.3"
+                }
+            ],
+            "price": "2.99",
+            "image": "images/fruits/apple.PNG",
+            "rating": "4.2"
+        },
+        {
+            "id": "781133288",
+            "name": "Avocado",
+            "genus": "Bay",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "8.0"
+                },
+                {
+                    "NutritionType.protein": "2.0"
+                },
+                {
+                    "NutritionType.fat": "14.0"
+                },
+                {
+                    "NutritionType.calories": "160.0"
+                },
+                {
+                    "NutritionType.sugar": "0.0"
+                }
+            ],
+            "price": "2.99",
+            "image": "images/fruits/avocado.PNG",
+            "rating": "3.7"
+        },
+        {
+            "id": "713776771",
+            "name": "Banana",
+            "genus": "Musa",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "22.0"
+                },
+                {
+                    "NutritionType.protein": "1.0"
+                },
+                {
+                    "NutritionType.fat": "0.2"
+                },
+                {
+                    "NutritionType.calories": "96.0"
+                },
+                {
+                    "NutritionType.sugar": "17.2"
+                }
+            ],
+            "price": "4.99",
+            "image": "images/fruits/banana.PNG",
+            "rating": "4.3"
+        },
+        {
+            "id": "311020180",
+            "name": "Blueberry",
+            "genus": "Fragaria",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "5.5"
+                },
+                {
+                    "NutritionType.protein": "0.0"
+                },
+                {
+                    "NutritionType.fat": "0.4"
+                },
+                {
+                    "NutritionType.calories": "29.0"
+                },
+                {
+                    "NutritionType.sugar": "5.4"
+                }
+            ],
+            "price": "5.99",
+            "image": "images/fruits/blueberry.png",
+            "rating": "4.6"
+        },
+        {
+            "id": "424928084",
+            "name": "Cherry",
+            "genus": "Prunus",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "10.0"
+                },
+                {
+                    "NutritionType.protein": "1.0"
+                },
+                {
+                    "NutritionType.fat": "0.3"
+                },
+                {
+                    "NutritionType.calories": "50.0"
+                },
+                {
+                    "NutritionType.sugar": "8.0"
+                }
+            ],
+            "price": "4.49",
+            "image": "images/fruits/cherry.png",
+            "rating": "4.6"
+        },
+        {
+            "id": "891805416",
+            "name": "Lemon",
+            "genus": "Citrus",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "9.0"
+                },
+                {
+                    "NutritionType.protein": "0.1"
+                },
+                {
+                    "NutritionType.fat": "0.3"
+                },
+                {
+                    "NutritionType.calories": "29.0"
+                },
+                {
+                    "NutritionType.sugar": "2.5"
+                }
+            ],
+            "price": "2.99",
+            "image": "images/fruits/lemon.PNG",
+            "rating": "4.1"
+        },
+        {
+            "id": "579367377",
+            "name": "Mango",
+            "genus": "Mangifera",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "15.0"
+                },
+                {
+                    "NutritionType.protein": "0.82"
+                },
+                {
+                    "NutritionType.fat": "0.38"
+                },
+                {
+                    "NutritionType.calories": "60.0"
+                },
+                {
+                    "NutritionType.sugar": "13.7"
+                }
+            ],
+            "price": "2.59",
+            "image": "images/fruits/mango.png",
+            "rating": "4.7"
+        },
+        {
+            "id": "331521164",
+            "name": "Orange",
+            "genus": "Citrus",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "8.3"
+                },
+                {
+                    "NutritionType.protein": "1.2"
+                },
+                {
+                    "NutritionType.fat": "0.2"
+                },
+                {
+                    "NutritionType.calories": "43.0"
+                },
+                {
+                    "NutritionType.sugar": "8.2"
+                }
+            ],
+            "price": "2.29",
+            "image": "images/fruits/orange.PNG",
+            "rating": "4.8"
+        },
+        {
+            "id": "375063044",
+            "name": "Papaya",
+            "genus": "Carica",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "30.0"
+                },
+                {
+                    "NutritionType.protein": "0.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "120.0"
+                },
+                {
+                    "NutritionType.sugar": "18.0"
+                }
+            ],
+            "price": "9.99",
+            "image": "images/fruits/papaya.PNG",
+            "rating": "4.8"
+        },
+        {
+            "id": "538164805",
+            "name": "Pear",
+            "genus": "Pyrus",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "15.0"
+                },
+                {
+                    "NutritionType.protein": "0.4"
+                },
+                {
+                    "NutritionType.fat": "0.1"
+                },
+                {
+                    "NutritionType.calories": "57.0"
+                },
+                {
+                    "NutritionType.sugar": "10.0"
+                }
+            ],
+            "price": "25.99",
+            "image": "images/fruits/pear.png",
+            "rating": "4.8"
+        },
+        {
+            "id": "150682078",
+            "name": "Pineapple",
+            "genus": "Ananas",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "13.12"
+                },
+                {
+                    "NutritionType.protein": "0.54"
+                },
+                {
+                    "NutritionType.fat": "0.12"
+                },
+                {
+                    "NutritionType.calories": "50.0"
+                },
+                {
+                    "NutritionType.sugar": "9.85"
+                }
+            ],
+            "price": "9.99",
+            "image": "images/fruits/pineapple.PNG",
+            "rating": "4.7"
+        },
+        {
+            "id": "733344968",
+            "name": "Raspberry",
+            "genus": "Rubus",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "12.0"
+                },
+                {
+                    "NutritionType.protein": "1.2"
+                },
+                {
+                    "NutritionType.fat": "0.7"
+                },
+                {
+                    "NutritionType.calories": "53.0"
+                },
+                {
+                    "NutritionType.sugar": "4.4"
+                }
+            ],
+            "price": "11.99",
+            "image": "images/fruits/raspberry.png",
+            "rating": "4.4"
+        },
+        {
+            "id": "228918503",
+            "name": "Strawberry",
+            "genus": "Fragaria",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "5.5"
+                },
+                {
+                    "NutritionType.protein": "0.8"
+                },
+                {
+                    "NutritionType.fat": "0.4"
+                },
+                {
+                    "NutritionType.calories": "29.0"
+                },
+                {
+                    "NutritionType.sugar": "5.4"
+                }
+            ],
+            "price": "7.99",
+            "image": "images/fruits/strawberry.PNG",
+            "rating": "4.8"
+        },
+        {
+            "id": "561269360",
+            "name": "Tomato",
+            "genus": "Solanum",
+            "category": "Category.fruits",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "3.9"
+                },
+                {
+                    "NutritionType.protein": "0.9"
+                },
+                {
+                    "NutritionType.fat": "0.2"
+                },
+                {
+                    "NutritionType.calories": "74.0"
+                },
+                {
+                    "NutritionType.sugar": "2.6"
+                }
+            ],
+            "price": "3.99",
+            "image": "images/fruits/tomato.PNG",
+            "rating": "4.3"
+        },
+        {
+            "id": "822866034",
+            "name": "Almond nuts",
+            "genus": "Prunus",
+            "category": "Category.nuts",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "11.0"
+                },
+                {
+                    "NutritionType.protein": "10.0"
+                },
+                {
+                    "NutritionType.fat": "24.0"
+                },
+                {
+                    "NutritionType.calories": "228.0"
+                },
+                {
+                    "NutritionType.sugar": "2.0"
+                }
+            ],
+            "price": "0.99",
+            "image": "images/nuts/almond-nuts.png",
+            "rating": "4.6"
+        },
+        {
+            "id": "612487635",
+            "name": "Cashew nuts",
+            "genus": "Anacardium",
+            "category": "Category.nuts",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "0.0"
+                },
+                {
+                    "NutritionType.protein": "9.0"
+                },
+                {
+                    "NutritionType.fat": "14.0"
+                },
+                {
+                    "NutritionType.calories": "185.0"
+                },
+                {
+                    "NutritionType.sugar": "9.0"
+                }
+            ],
+            "price": "10.99",
+            "image": "images/nuts/cashew-nuts.png",
+            "rating": "4.6"
+        },
+        {
+            "id": "871868778",
+            "name": "Chestnuts",
+            "genus": "Castenea",
+            "category": "Category.nuts",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "4.0"
+                },
+                {
+                    "NutritionType.protein": "1.0"
+                },
+                {
+                    "NutritionType.fat": "1.0"
+                },
+                {
+                    "NutritionType.calories": "200.0"
+                },
+                {
+                    "NutritionType.sugar": "11.0"
+                }
+            ],
+            "price": "5.99",
+            "image": "images/nuts/chestnuts.png",
+            "rating": "4.0"
+        },
+        {
+            "id": "283194722",
+            "name": "Hazelnuts",
+            "genus": "Corylus",
+            "category": "Category.nuts",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "5.0"
+                },
+                {
+                    "NutritionType.protein": "4.0"
+                },
+                {
+                    "NutritionType.fat": "17.0"
+                },
+                {
+                    "NutritionType.calories": "176.0"
+                },
+                {
+                    "NutritionType.sugar": "1.0"
+                }
+            ],
+            "price": "12.99",
+            "image": "images/nuts/hazelnut.png",
+            "rating": "4.0"
+        },
+        {
+            "id": "215108385",
+            "name": "Peanuts",
+            "genus": "Arachis",
+            "category": "Category.nuts",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "16.0"
+                },
+                {
+                    "NutritionType.protein": "25.0"
+                },
+                {
+                    "NutritionType.fat": "49.0"
+                },
+                {
+                    "NutritionType.calories": "567.0"
+                },
+                {
+                    "NutritionType.sugar": "4.0"
+                }
+            ],
+            "price": "5.99",
+            "image": "images/nuts/peanuts.png",
+            "rating": "4.6"
+        },
+        {
+            "id": "297359275",
+            "name": "Pecan nuts",
+            "genus": "Hickory",
+            "category": "Category.nuts",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "3.0"
+                },
+                {
+                    "NutritionType.protein": "2.0"
+                },
+                {
+                    "NutritionType.fat": "20.0"
+                },
+                {
+                    "NutritionType.calories": "193.0"
+                },
+                {
+                    "NutritionType.sugar": "1.0"
+                }
+            ],
+            "price": "5.99",
+            "image": "images/nuts/pecan-nuts.png",
+            "rating": "4.0"
+        },
+        {
+            "id": "806445350",
+            "name": "Walnuts",
+            "genus": "Juglans",
+            "category": "Category.nuts",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "0.0"
+                },
+                {
+                    "NutritionType.protein": "0.0"
+                },
+                {
+                    "NutritionType.fat": "2.0"
+                },
+                {
+                    "NutritionType.calories": "26.0"
+                },
+                {
+                    "NutritionType.sugar": "0.0"
+                }
+            ],
+            "price": "2.99",
+            "image": "images/nuts/walnuts.png",
+            "rating": "4.8"
+        },
+        {
+            "id": "238392466",
+            "name": "Cabbage",
+            "genus": "Cabbages",
+            "category": "Category.vegetables",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "5.0"
+                },
+                {
+                    "NutritionType.protein": "1.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "22.0"
+                },
+                {
+                    "NutritionType.sugar": "1.0"
+                }
+            ],
+            "price": "0.99",
+            "image": "images/vegs/cabbage.PNG",
+            "rating": "3.6"
+        },
+        {
+            "id": "288461444",
+            "name": "Carrot",
+            "genus": "Daucus",
+            "category": "Category.vegetables",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "35.0"
+                },
+                {
+                    "NutritionType.protein": "1.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "4.0"
+                },
+                {
+                    "NutritionType.sugar": "12.0"
+                }
+            ],
+            "price": "0.59",
+            "image": "images/vegs/carrot.PNG",
+            "rating": "4.3"
+        },
+        {
+            "id": "381394528",
+            "name": "Lettuce",
+            "genus": "Lactuca",
+            "category": "Category.vegetables",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "0.0"
+                },
+                {
+                    "NutritionType.protein": "0.0"
+                },
+                {
+                    "NutritionType.fat": "0.0"
+                },
+                {
+                    "NutritionType.calories": "25.0"
+                },
+                {
+                    "NutritionType.sugar": "0.0"
+                }
+            ],
+            "price": "39.99",
+            "image": "images/vegs/lettuce.PNG",
+            "rating": "3.0"
+        },
+        {
+            "id": "546126939",
+            "name": "Parsely",
+            "genus": "Petroselinum",
+            "category": "Category.vegetables",
+            "nutritions": [
+                {
+                    "NutritionType.carbohydates": "6.0"
+                },
+                {
+                    "NutritionType.protein": "3.0"
+                },
+                {
+                    "NutritionType.fat": "1.0"
+                },
+                {
+                    "NutritionType.calories": "36.0"
+                },
+                {
+                    "NutritionType.sugar": "3.0"
+                }
+            ],
+            "price": "1.99",
+            "image": "images/vegs/parsely.PNG",
+            "rating": "3.2"
+        }
+    ]
+}

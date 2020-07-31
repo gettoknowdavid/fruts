@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "name": "Fruits",
+      "category_url": "/shop/categories/Fruits"
+    },
+    {
+      "name": "Dried",
+      "category_url": "/shop/categories/Dried"
+    },
+    {
+      "name": "Exotic",
+      "category_url": "/shop/categories/Exotic"
+    },
+    {
+      "name": "Nuts",
+      "category_url": "/shop/categories/Nuts"
+    },
+    {
+      "name": "Fresh",
+      "category_url": "/shop/categories/Fresh"
+    }
+  ]
+}
