@@ -24,29 +24,30 @@ class AppBackground extends StatelessWidget {
 
     return Material(
       color: colorScheme.secondary,
-      child: Stack(
-        alignment: Alignment.topCenter,
-        fit: StackFit.loose,
-        children: <Widget>[
-          ClipRRect(
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(60),
+      child: SingleChildScrollView(
+        physics: ClampingScrollPhysics(),
+        child: Column(
+          children: <Widget>[
+            ClipRRect(
+              borderRadius: BorderRadius.vertical(
+                bottom: Radius.circular(60),
+              ),
+              child: Container(
+                height: topChildHeight ?? height * 0.93,
+                width: addSidePadding ? appliedWidth : width,
+                child: topChild,
+              ),
             ),
-            child: Container(
-              height: topChildHeight ?? height * 0.93,
-              width: addSidePadding ? appliedWidth : width,
-              child: topChild,
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                    child: bottomChild,
+                    width: addSidePadding ? appliedWidth : width,
+                  ) ??
+                  Container(),
             ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-                  child: bottomChild,
-                  width: addSidePadding ? appliedWidth : width,
-                ) ??
-                Container(),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

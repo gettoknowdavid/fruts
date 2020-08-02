@@ -12,6 +12,7 @@ class FrutsAppBar extends StatefulWidget implements PreferredSizeWidget {
     this.title,
     this.action,
     this.bottom,
+    this.backgroundColor,
     this.bottomOpacity = 1.0,
   })  : preferredSize = const Size.fromHeight(prefferedHeight),
         super(key: key);
@@ -20,6 +21,7 @@ class FrutsAppBar extends StatefulWidget implements PreferredSizeWidget {
   final String title;
   final Widget action;
   final Widget bottom;
+  final Color backgroundColor;
   final double bottomOpacity;
 
   @override
@@ -56,7 +58,7 @@ class _FrutsAppBarState extends State<FrutsAppBar> {
                         widget.leading ??
                             ImageIcon(
                               AssetImage('images/icons/menu.png'),
-                              size: 30,
+                              size: 26,
                             ),
                         widget.action ?? CartBag(),
                       ],
@@ -116,13 +118,17 @@ class _FrutsAppBarState extends State<FrutsAppBar> {
       );
     }
 
-    return Container(
-      height: widget.bottom == null
-          ? widget.preferredSize.height - kBottomBarHeight
-          : widget.preferredSize.height,
-      width: width,
-      padding: EdgeInsets.symmetric(horizontal: 26),
-      child: appBar,
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        height: widget.bottom == null
+            ? widget.preferredSize.height - kBottomBarHeight
+            : widget.preferredSize.height,
+        width: width,
+        color: widget.backgroundColor ?? Colors.transparent,
+        padding: EdgeInsets.symmetric(horizontal: 26),
+        child: appBar,
+      ),
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:fruts/src/blocs/cart/cart_bloc.dart';
 import 'package:fruts/src/data/enum_helper.dart';
 import 'package:fruts/src/models/plant.dart';
 import 'package:fruts/widgets/custom_app_bar.dart';
+import 'package:fruts/widgets/custom_back_button.dart';
 import 'package:intl/intl.dart';
 
 class CartScreen extends StatefulWidget {
@@ -28,58 +29,59 @@ class _CartScreenState extends State<CartScreen> {
 
     final appBarHeight = FrutsAppBar().preferredSize.height - 20;
 
-    return Container(
-      height: height,
-      width: width,
-      child: Stack(
-        children: <Widget>[
-          Scaffold(
-            backgroundColor: Theme.of(context).colorScheme.secondary,
-            body: BlocBuilder<CartBloc, CartState>(
-              bloc: context.bloc<CartBloc>(),
-              builder: (context, state) {
-                if (state is CartLoaded) {
-                  return ListView(
-                    padding: EdgeInsets.only(top: appBarHeight + 20),
-                    children: children(
-                      state.plants,
-                      state.plantsInCart,
-                    ),
-                  );
-                } else if (state is CartLoading) {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                } else {
-                  return Center(
-                    child: Text('Cart Not Loaded'),
-                  );
-                }
-              },
-            ),
-          ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: Container(
-              height: appBarHeight,
-              width: width * 0.96,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.vertical(
-                  bottom: Radius.circular(60),
-                ),
-              ),
-              child: FrutsAppBar(
-                title: 'CART',
-                leading: GestureDetector(
-                  child: BackButtonIcon(),
-                  onTap: () => Navigator.pop(context),
-                ),
-                action: Icon(Icons.more_horiz),
+    return MediaQuery(
+      data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+          child: Container(
+        height: height,
+        width: width,
+        child: Stack(
+          children: <Widget>[
+            Scaffold(
+              backgroundColor: Theme.of(context).colorScheme.secondary,
+              
+              body: BlocBuilder<CartBloc, CartState>(
+                bloc: context.bloc<CartBloc>(),
+                builder: (context, state) {
+                  if (state is CartLoaded) {
+                    return ListView(
+                      padding: EdgeInsets.only(top: appBarHeight + 20),
+                      children: children(
+                        state.plants,
+                        state.plantsInCart,
+                      ),
+                    );
+                  } else if (state is CartLoading) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else {
+                    return Center(
+                      child: Text('Cart Not Loaded'),
+                    );
+                  }
+                },
               ),
             ),
-          ),
-        ],
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                height: appBarHeight,
+                width: width * 0.96,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.vertical(
+                    bottom: Radius.circular(60),
+                  ),
+                ),
+                child: FrutsAppBar(
+                  title: 'CART',
+                  leading: FrutsBackButton(),
+                  action: Icon(Icons.more_horiz),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

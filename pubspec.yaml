@@ -107,6 +107,7 @@ flutter:
    - images/icons/search.png
    - images/icons/settings.png
    - images/icons/filter.png
+   - images/icons/arrows.png
 
    - images/vegs/cabbage.PNG
    - images/vegs/carrot.PNG

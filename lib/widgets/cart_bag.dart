@@ -1,8 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:fruts/screens/cart_screen.dart';
 import 'package:fruts/src/blocs/cart/cart_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 class CartBag extends StatefulWidget {
   const CartBag({Key key}) : super(key: key);
@@ -18,9 +18,8 @@ class _CartBagState extends State<CartBag> {
     final colorScheme = Theme.of(context).colorScheme;
 
     final outerSize = 46.0;
-    final smallSize = 24.5;
-    final left = (outerSize - smallSize) + (smallSize / 5);
-
+    final smallSize = 20.0;
+    final left = (outerSize - smallSize) + (smallSize / 12);
 
     return StreamBuilder<int>(
       stream: context.bloc<CartBloc>().cartQuantityStream,
@@ -44,7 +43,7 @@ class _CartBagState extends State<CartBag> {
                   AssetImage('images/icons/cart-bag.png'),
                 ),
               ),
-              !snapshot.hasData
+              !snapshot.hasData || snapshot.data == 0
                   ? Container()
                   : Positioned(
                       left: left,
@@ -57,7 +56,7 @@ class _CartBagState extends State<CartBag> {
                           color: colorScheme.secondaryVariant,
                           shape: BoxShape.circle,
                         ),
-                        child: Text(
+                        child: AutoSizeText(
                           '${snapshot.data}',
                           style: textTheme.bodyText1.copyWith(
                             fontWeight: FontWeight.w600,

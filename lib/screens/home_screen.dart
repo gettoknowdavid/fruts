@@ -58,11 +58,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       tabs: _tabs,
     );
 
-    return AppBackground(
-      topChild: Scaffold(
-        appBar: FrutsAppBar(bottom: tabBar),
-        body: HomeTabViews(
-          tabController: tabController,
+    return MediaQuery(
+      data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+      child: AppBackground(
+        topChild: Scaffold(
+          appBar: FrutsAppBar(bottom: tabBar),
+          body: HomeTabViews(
+            tabController: tabController,
+          ),
         ),
       ),
     );
