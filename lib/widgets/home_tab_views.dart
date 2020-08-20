@@ -49,7 +49,7 @@ class HomeTabViews extends StatelessWidget {
     }
 
     return BlocBuilder<TabsBloc, TabsState>(
-      bloc: context.bloc<TabsBloc>(),
+      cubit: context.bloc<TabsBloc>(),
       builder: (context, state) {
         if (state is TabsLoaded) {
           return TabBarView(

@@ -13,15 +13,12 @@ part 'cart_state.dart';
 
 class CartBloc extends Bloc<CartEvent, CartState> {
   final PlantsRepository repository;
-  CartBloc({@required this.repository});
+  CartBloc({@required this.repository}) : super(CartLoading());
 
   DatabaseHandler repo = DatabaseHandler();
 
   final cartQuantityController = BehaviorSubject<int>(sync: true);
   Stream<int> get cartQuantityStream => cartQuantityController.stream;
-
-  @override
-  CartState get initialState => CartLoading();
 
   @override
   Stream<CartState> mapEventToState(

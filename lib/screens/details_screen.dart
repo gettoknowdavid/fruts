@@ -1,6 +1,9 @@
+import 'dart:math';
+
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:fruts/src/data/enum_helper.dart';
 import 'package:fruts/src/models/category.dart';
+import 'package:fruts/src/models/nutrition_type.dart';
 import 'package:fruts/src/models/plant.dart';
 import 'package:fruts/widgets/app_background.dart';
 import 'package:fruts/widgets/custom_app_bar.dart';
@@ -28,8 +31,9 @@ class _PlantCost extends StatelessWidget {
       children: <Widget>[
         Text(
           formatter.format(plant.price),
-          style: textTheme.headline6.copyWith(
-            fontWeight: FontWeight.w500,
+          style: textTheme.headline4.copyWith(
+            fontSize: 30,
+            fontWeight: FontWeight.w700,
             color: colorScheme.secondaryVariant,
           ),
         ),
@@ -64,7 +68,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
     final height = size.height;
     final width = size.width;
 
-    final topChildHeight = height * 0.8;
+    final topChildHeight = height * 0.74;
     final imageHeight = topChildHeight * 0.45;
 
     final category = enumFormatter(widget.plant.category);
@@ -101,7 +105,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   softWrap: true,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style: textTheme.headline4.copyWith(
+                  style: textTheme.headline3.copyWith(
                     color: colorScheme.onSurface.withOpacity(0.7),
                     fontWeight: FontWeight.w600,
                   ),
@@ -111,7 +115,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   softWrap: true,
-                  style: textTheme.subtitle1.copyWith(
+                  style: textTheme.headline5.copyWith(
                     color: colorScheme.onSurface.withOpacity(0.5),
                   ),
                 ),
@@ -120,7 +124,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   softWrap: true,
-                  style: textTheme.caption.copyWith(
+                  style: textTheme.headline6.copyWith(
+                    fontSize: 18,
                     color: Colors.black26,
                   ),
                 ),
@@ -131,14 +136,28 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ),
         ),
         bottomChild: Container(
-          padding: EdgeInsets.symmetric(vertical: 30),
+          padding: EdgeInsets.symmetric(vertical: 0),
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              NutritionWidget(
-                height: height,
-                plant: widget.plant,
+              SizedBox(height: 35),
+              LimitedBox(
+                maxHeight: height * 0.1,
+                child: ListView.builder(
+                  itemCount: widget.plant.nutritions.length,
+                  scrollDirection: Axis.horizontal,
+                  primary: false,
+                  itemBuilder: (context, index) {
+                    return NutritionWidget(
+                      height: height,
+                      plant: widget.plant,
+                      nutrient: widget.plant.nutritions[index],
+                    );
+                  },
+                ),
               ),
+              SizedBox(height: 40),
               MaterialButton(
                 elevation: 0.0,
                 onPressed: () {},
@@ -165,11 +184,15 @@ class NutritionWidget extends StatelessWidget {
   const NutritionWidget({
     Key key,
     @required this.plant,
+    @required this.nutrient,
     @required this.height,
+    this.color,
   }) : super(key: key);
 
   final Plant plant;
+  final Map<NutritionType, double> nutrient;
   final double height;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -178,38 +201,113 @@ class NutritionWidget extends StatelessWidget {
 
     final width = MediaQuery.of(context).size.width;
 
-    // print(plant.nutritions.map((e) => e.values).toList());
-    final nutrients = plant.nutritions.map((e) => e.keys).toList();
-    final values = plant.nutritions.map((e) => e).toList();
-    final v = values.map((e) => e.values).toList();
-    print(v);
+    final type = nutrient.keys.elementAt(0);
+    final value = nutrient.values.elementAt(0);
 
-    nutrientsList() {
-      final _nutrients = [];
-      for (int i = 0; i > nutrients.length; i++) {
-        print(nutrients[i].first);
-        _nutrients.add(
-          Column(
-            children: <Widget>[
-              // Text(nutrients[o])
-            ],
-          ),
-        );
-      }
-      return _nutrients;
-    }
+    final category = enumFormatter(type);
 
-    return Container(
-      color: Colors.pink,
-      height: height * 0.2,
-      child: Column(
-        children: <Widget>[
-          Text('Protein', style: textTheme.headline6),
-          Container(
-            height: 30,
-          ),
-        ],
+    return IntrinsicWidth(
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        margin: EdgeInsets.only(right: 16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(18),
+        ),
+        child: Row(
+          children: <Widget>[
+            Text(
+              category,
+              style: textTheme.headline5.copyWith(
+                color: Colors.black87,
+              ),
+            ),
+            SizedBox(width: 10),
+            Container(
+              height: (height * 0.1) * 0.85,
+              width: (height * 0.1) * 0.85,
+              child: CustomPaint(
+                size: MediaQuery.of(context).size,
+                painter: ValuePainter(
+                  valuePercent(type, value),
+                  color: colorScheme.secondaryVariant,
+                ),
+                child: Center(
+                  child: AutoSizeText(
+                    '${value.toInt()}',
+                    style: textTheme.headline5.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.secondary,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
+  }
+}
+
+class ValuePainter extends CustomPainter {
+  final double value;
+  final Color color;
+
+  ValuePainter(this.value, {this.color});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    var progressPaint = Paint()
+      ..color = color
+      ..strokeWidth = 10
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.butt;
+
+    Offset center = Offset(size.width / 2, size.height / 2);
+
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: (size.width / 2.2) - 8),
+      -pi / 2,
+      2 * pi * (value / 100),
+      false,
+      progressPaint,
+    );
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return false;
+  }
+}
+
+double valuePercent(NutritionType type, double value) {
+  double standardRate;
+
+  switch (type) {
+    case NutritionType.fat:
+      standardRate = 44.0;
+      double result = (value / standardRate) * 100;
+      return result.roundToDouble();
+      break;
+    case NutritionType.carbohydates:
+      standardRate = 250.0;
+      double result = (value / standardRate) * 100;
+      return result.roundToDouble();
+      break;
+    case NutritionType.protein:
+      standardRate = 56.0;
+      double result = (value / standardRate) * 100;
+      return result.roundToDouble();
+      break;
+    case NutritionType.sugar:
+      standardRate = 30.5;
+      double result = (value / standardRate) * 100;
+      return result.roundToDouble();
+      break;
+    default:
+      standardRate = 2500.0;
+      double result = (value / standardRate) * 100;
+      return result.roundToDouble();
   }
 }

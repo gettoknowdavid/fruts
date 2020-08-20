@@ -14,22 +14,18 @@ class TabsBloc extends Bloc<TabsEvent, TabsState> {
   final PlantsBloc plantsBloc;
   StreamSubscription plantsSubscription;
 
-  TabsBloc({@required this.plantsBloc}) {
+  TabsBloc({@required this.plantsBloc})
+      : super(plantsBloc.state is PlantsLoaded
+            ? TabsLoaded(
+                (plantsBloc.state as PlantsLoaded).plants,
+                Category.all,
+              )
+            : TabsLoading()) {
     plantsSubscription = plantsBloc.listen((state) {
       if (state is PlantsLoaded) {
         add(UpdatePlants((plantsBloc.state as PlantsLoaded).plants));
       }
     });
-  }
-
-  @override
-  TabsState get initialState {
-    return plantsBloc.state is PlantsLoaded
-        ? TabsLoaded(
-            (plantsBloc.state as PlantsLoaded).plants,
-            Category.all,
-          )
-        : TabsLoading();
   }
 
   @override

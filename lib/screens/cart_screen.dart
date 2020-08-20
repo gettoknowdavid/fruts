@@ -1,12 +1,9 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruts/src/blocs/cart/cart_bloc.dart';
-import 'package:fruts/src/data/enum_helper.dart';
 import 'package:fruts/src/models/plant.dart';
 import 'package:fruts/widgets/custom_app_bar.dart';
 import 'package:fruts/widgets/custom_back_button.dart';
-import 'package:intl/intl.dart';
 
 class CartScreen extends StatefulWidget {
   @override
@@ -40,7 +37,7 @@ class _CartScreenState extends State<CartScreen> {
               backgroundColor: Theme.of(context).colorScheme.secondary,
               
               body: BlocBuilder<CartBloc, CartState>(
-                bloc: context.bloc<CartBloc>(),
+                cubit: context.bloc<CartBloc>(),
                 builder: (context, state) {
                   if (state is CartLoaded) {
                     return ListView(

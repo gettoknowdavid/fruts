@@ -12,10 +12,7 @@ part 'plants_state.dart';
 class PlantsBloc extends Bloc<PlantsEvent, PlantsState> {
   final PlantsRepository repository;
 
-  PlantsBloc({@required this.repository});
-
-  @override
-  PlantsState get initialState => PlantsLoading();
+  PlantsBloc({@required this.repository}) : super(PlantsLoading());
 
   @override
   Stream<PlantsState> mapEventToState(
@@ -28,6 +25,6 @@ class PlantsBloc extends Bloc<PlantsEvent, PlantsState> {
       } catch (_) {
         yield PlantsNotLoaded();
       }
-    } 
+    }
   }
 }
