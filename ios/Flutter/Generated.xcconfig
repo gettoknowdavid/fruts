@@ -1,10 +1,10 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/Users/gmiwc/Flutter/SDK/flutter
-FLUTTER_APPLICATION_PATH=/Users/gmiwc/Flutter/Projects/fruts
-FLUTTER_TARGET=lib/main.dart
+FLUTTER_ROOT=C:\Code\sdk\flutter
+FLUTTER_APPLICATION_PATH=C:\Code\projects\flutter\mobile\fruts
+FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build
-SYMROOT=${SOURCE_ROOT}/../build/ios
+SYMROOT=${SOURCE_ROOT}/../build\ios
 OTHER_LDFLAGS=$(inherited) -framework Flutter
-FLUTTER_FRAMEWORK_DIR=/Users/gmiwc/Flutter/SDK/flutter/bin/cache/artifacts/engine/ios
+FLUTTER_FRAMEWORK_DIR=C:\Code\sdk\flutter\bin\cache\artifacts\engine\ios
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1
