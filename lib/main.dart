@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruts/app.dart';
 import 'package:fruts/src/blocs/cart/cart_bloc.dart';
 import 'package:fruts/src/blocs/fruts_bloc_observer.dart';
+import 'package:fruts/src/blocs/navigation/index.dart';
 import 'package:fruts/src/blocs/plants/plants_bloc.dart';
 import 'package:fruts/src/core/plants_repository.dart';
 import 'package:fruts/src/database/database_handler.dart';
@@ -20,6 +21,9 @@ void runFruts(PlantsRepository repository) {
   runApp(
     MultiBlocProvider(
       providers: [
+        BlocProvider<NavigationBloc>(
+          create: (context) => NavigationBloc(),
+        ),
         BlocProvider<PlantsBloc>(
           create: (context) => PlantsBloc(
             repository: repository,

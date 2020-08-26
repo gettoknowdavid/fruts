@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruts/screens/details_screen.dart';
 import 'package:fruts/src/blocs/cart/cart_bloc.dart';
 import 'package:fruts/src/models/plant.dart';
+import 'package:fruts/widgets/fade_page_route.dart';
 import 'package:intl/intl.dart';
 
 class PlantCard extends StatelessWidget {
@@ -32,103 +33,99 @@ class PlantCard extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (context) => DetailsScreen(
-                plant: plant,
-              ),
-            ),
+            FadePageRoute(child: DetailsScreen(plant: plant)),
           );
         },
-        child: Hero(
-          tag: '${plant.id}__tag',
-          child: SizedBox(
-            height: containerHeight,
-            width: containerWidth,
-            child: Material(
-              color: colorScheme.primary,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(26),
-              ),
-              elevation: 12,
-              shadowColor: colorScheme.secondary.withOpacity(0.3),
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    height: containerHeight * 0.6,
-                    width: containerWidth,
-                    padding: EdgeInsets.fromLTRB(12, 0, 12, 0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(26),
+        child: SizedBox(
+          height: containerHeight,
+          width: containerWidth,
+          child: Material(
+            color: colorScheme.primary,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(26),
+            ),
+            elevation: 12,
+            shadowColor: colorScheme.secondary.withOpacity(0.3),
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  height: containerHeight * 0.6,
+                  width: containerWidth,
+                  padding: EdgeInsets.fromLTRB(12, 0, 12, 0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(26),
+                    child: Hero(
+                      tag: '${plant.id}__tag',
                       child: Image.asset(plant.image),
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(20, 4, 20, 16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          Text(
-                            plant.name,
-                            softWrap: true,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
-                            style: textTheme.headline6.copyWith(
-                              fontWeight: FontWeight.w600,
-                            ),
+                ),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(20, 4, 20, 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Text(
+                          plant.name,
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
+                          style: textTheme.headline6.copyWith(
+                            fontWeight: FontWeight.w600,
                           ),
-                          Text(
-                            plant.genus,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            softWrap: true,
-                            style: textTheme.subtitle1.copyWith(
-                              color: Colors.black54,
-                            ),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            formatter.format(plant.price),
-                            style: textTheme.headline6.copyWith(
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          Text(
-                            'per kilo',
-                            style: textTheme.caption.copyWith(
-                              color: Colors.black38,
-                              fontStyle: FontStyle.italic,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: Container(
-                      height: containerWidth * 0.25,
-                      width: containerWidth * 0.25,
-                      decoration: BoxDecoration(
-                        color: colorScheme.secondaryVariant,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(26),
-                          bottomLeft: Radius.circular(26),
                         ),
-                      ),
-                      child: IconButton(
-                        icon: Icon(Icons.add),
-                        onPressed: () {
-                          context.bloc<CartBloc>().add(AddToCart(plant));
-                        },
-                        color: colorScheme.primary,
-                      ),
+                        Text(
+                          plant.genus,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: true,
+                          style: textTheme.subtitle1.copyWith(
+                            color: Colors.black54,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          formatter.format(plant.price),
+                          style: textTheme.headline6.copyWith(
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          'per kilo',
+                          style: textTheme.caption.copyWith(
+                            color: Colors.black38,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    height: containerWidth * 0.25,
+                    width: containerWidth * 0.25,
+                    decoration: BoxDecoration(
+                      color: colorScheme.secondaryVariant,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(26),
+                        bottomLeft: Radius.circular(26),
+                      ),
+                    ),
+                    child: IconButton(
+                      icon: Icon(Icons.add),
+                      onPressed: () {
+                        context.bloc<CartBloc>().add(AddToCart(plant));
+                      },
+                      color: colorScheme.primary,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

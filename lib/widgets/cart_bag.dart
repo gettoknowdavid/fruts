@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fruts/screens/cart_screen.dart';
 import 'package:fruts/src/blocs/cart/cart_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruts/widgets/fade_page_route.dart';
 
 class CartBag extends StatefulWidget {
   const CartBag({Key key}) : super(key: key);
@@ -28,7 +29,7 @@ class _CartBagState extends State<CartBag> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CartScreen()),
+              FadePageRoute(child: CartScreen(showBackButton: true)),
             );
           },
           child: Stack(

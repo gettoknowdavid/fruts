@@ -4,6 +4,7 @@ import 'package:fruts/screens/home_screen.dart';
 import 'package:fruts/src/blocs/plants/plants_bloc.dart';
 import 'package:fruts/src/blocs/tabs/tabs_bloc.dart';
 import 'package:fruts/theme.dart';
+import 'package:fruts/widgets/screen_controller.dart';
 
 class App extends StatelessWidget {
   @override
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
             ),
           ),
         ],
-        child: HomeScreen(),
+        child: ScreenController(),
       ),
       title: 'Fruts',
       theme: FrutsTheme.theme,

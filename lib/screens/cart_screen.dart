@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruts/src/blocs/cart/cart_bloc.dart';
 import 'package:fruts/src/models/plant.dart';
-import 'package:fruts/widgets/custom_app_bar.dart';
 import 'package:fruts/widgets/custom_back_button.dart';
+import 'package:fruts/widgets/fruts_app_bar.dart';
 
 class CartScreen extends StatefulWidget {
+  final bool showBackButton;
+
+  const CartScreen({Key key, this.showBackButton = false}) : super(key: key);
+
   @override
   _CartScreenState createState() => _CartScreenState();
 }
@@ -28,14 +32,13 @@ class _CartScreenState extends State<CartScreen> {
 
     return MediaQuery(
       data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-          child: Container(
+      child: Container(
         height: height,
         width: width,
         child: Stack(
           children: <Widget>[
             Scaffold(
               backgroundColor: Theme.of(context).colorScheme.secondary,
-              
               body: BlocBuilder<CartBloc, CartState>(
                 cubit: context.bloc<CartBloc>(),
                 builder: (context, state) {
@@ -72,8 +75,9 @@ class _CartScreenState extends State<CartScreen> {
                 ),
                 child: FrutsAppBar(
                   title: 'CART',
-                  leading: FrutsBackButton(),
                   action: Icon(Icons.more_horiz),
+                  leading:
+                      !widget.showBackButton ? Container() : FrutsBackButton(),
                 ),
               ),
             ),

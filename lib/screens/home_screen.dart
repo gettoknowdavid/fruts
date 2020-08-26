@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruts/src/data/enum_helper.dart';
 import 'package:fruts/src/models/category.dart';
 import 'package:fruts/widgets/app_background.dart';
-import 'package:fruts/widgets/custom_app_bar.dart';
+import 'package:fruts/widgets/fruts_app_bar.dart';
 import 'package:fruts/widgets/home_tab_views.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -41,10 +41,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    // final height = MediaQuery.of(context).size.height;
-    // final width = MediaQuery.of(context).size.width;
-
-    // final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
     var tabBar = TabBar(
@@ -63,9 +59,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       child: AppBackground(
         topChild: Scaffold(
           appBar: FrutsAppBar(bottom: tabBar),
-          body: HomeTabViews(
-            tabController: tabController,
-          ),
+          body: HomeTabViews(tabController: tabController),
         ),
       ),
     );

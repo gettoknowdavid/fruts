@@ -19,7 +19,7 @@ class FrutsTheme {
     );
 
     return base.copyWith(
-      platform: TargetPlatform.iOS,
+      // platform: TargetPlatform.iOS,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: primary,
       canvasColor: Colors.transparent,
