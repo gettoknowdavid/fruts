@@ -40,7 +40,7 @@ dependencies:
   shared_preferences: ^0.5.7
   path:
   json_annotation:
-  
+  bloc_test: ^7.0.2
 
 dev_dependencies:
   flutter_test:
