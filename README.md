@@ -16,7 +16,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 # fruts
 
-![image](https://user-images.githubusercontent.com/29507277/91495189-186f6e00-e8b2-11ea-8d72-d5ccbfb4a702.png)
+![image](https://user-images.githubusercontent.com/29507277/91495189-186f6e00-e8b2-11ea-8d72-d5ccbfb4a702.png =270x585)
 
 ![Screenshot_20200827-215141](https://user-images.githubusercontent.com/29507277/91495246-31781f00-e8b2-11ea-9f13-0f1257ae5bdb.jpg)
 
