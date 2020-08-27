@@ -136,7 +136,5 @@ class _FrutsAppBarState extends State<FrutsAppBar> {
     );
   }
 
-  Widget buildCartBag(BuildContext context) {
-    return CartBag();
-  }
+  
 }

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruts/screens/cart_screen.dart';
 import 'package:fruts/src/blocs/cart/cart_bloc.dart';
 import 'package:fruts/src/models/category.dart';
 import 'package:fruts/src/models/plant.dart';
 import 'package:fruts/widgets/add_to_cart_button.dart';
 import 'package:fruts/widgets/app_background.dart';
 import 'package:fruts/widgets/cart_bag.dart';
+import 'package:fruts/widgets/fade_page_route.dart';
 import 'package:fruts/widgets/fruts_app_bar.dart';
 import 'package:fruts/widgets/custom_back_button.dart';
 import 'package:fruts/widgets/nutrient_widget.dart';
@@ -34,7 +36,12 @@ class _TopChild extends StatelessWidget {
         appBar: FrutsAppBar(
           title: '',
           leading: FrutsBackButton(),
-          action: CartBag(),
+          action: StreamBuilder<int>(
+            stream: context.bloc<CartBloc>().cartQuantityStream,
+            builder: (context, snapshot) {
+              return buildCartBag(context, snapshot);
+            },
+          ),
         ),
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
@@ -91,6 +98,20 @@ class _TopChild extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget buildCartBag(context, snapshot) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          FadePageRoute(
+            child: CartScreen(showBackButton: true),
+          ),
+        );
+      },
+      child: CartBag(value: snapshot.data),
     );
   }
 }

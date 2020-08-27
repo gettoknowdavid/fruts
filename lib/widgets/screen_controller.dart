@@ -29,19 +29,6 @@ class _ScreenControllerState extends State<ScreenController> {
     }
   }
 
-  String _titles(ScreenEnum screenEnum) {
-    switch (screenEnum) {
-      case ScreenEnum.cart:
-        return cart.title.toUpperCase();
-        break;
-      case ScreenEnum.home:
-        return home.title.toUpperCase();
-        break;
-      default:
-        return account.title.toUpperCase();
-    }
-  }
-
   List<FrutsBottomNavigationBarItem> get _items {
     List<FrutsBottomNavigationBarItem> _items = [];
 
@@ -49,7 +36,6 @@ class _ScreenControllerState extends State<ScreenController> {
       _items.add(
         FrutsBottomNavigationBarItem(
           icon: _icons(screenEnum),
-          title: _titles(screenEnum),
           activeColor: theme.colorScheme.onSecondary,
           inActiveColor: Colors.white24,
         ),

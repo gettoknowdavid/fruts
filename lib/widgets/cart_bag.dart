@@ -1,75 +1,99 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:fruts/screens/cart_screen.dart';
-import 'package:fruts/src/blocs/cart/cart_bloc.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/widgets/fade_page_route.dart';
 
 class CartBag extends StatefulWidget {
-  const CartBag({Key key}) : super(key: key);
+  const CartBag({Key key, @required this.value, this.color}) : super(key: key);
+
+  final int value;
+  final Color color;
 
   @override
   _CartBagState createState() => _CartBagState();
 }
 
-class _CartBagState extends State<CartBag> {
+class _CartBagState extends State<CartBag> with TickerProviderStateMixin {
+  AnimationController controller;
+  Animation<double> bounceAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 20),
+    );
+
+    bounceAnimation = Tween<double>(begin: 0.75, end: 2.0).animate(
+      CurvedAnimation(parent: controller, curve: Curves.elasticInOut),
+    )..addListener(() => setState(() {}));
+
+    controller.forward().whenComplete(() => controller.reverse());
+  }
+
+  animate() {
+    controller
+        .forward()
+        .whenComplete(() => controller.reverse())
+        .whenComplete(() => controller.reset());
+    ;
+  }
+
+  @override
+  void didUpdateWidget(CartBag oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.value != widget.value) animate();
+  }
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
 
     final outerSize = 46.0;
-    final smallSize = 20.0;
-    final left = (outerSize - smallSize) + (smallSize / 12);
+    final smallSize = 34.0;
+    final left = (outerSize - smallSize) + (smallSize / 6);
 
-    return StreamBuilder<int>(
-      stream: context.bloc<CartBloc>().cartQuantityStream,
-      builder: (context, snapshot) {
-        return GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              FadePageRoute(child: CartScreen(showBackButton: true)),
-            );
-          },
-          child: Stack(
-            alignment: Alignment.center,
-            overflow: Overflow.visible,
-            children: <Widget>[
-              Container(
-                height: outerSize,
-                width: outerSize,
-                padding: EdgeInsets.all(8),
-                child: ImageIcon(
-                  AssetImage('images/icons/cart-bag.png'),
+    return Stack(
+      alignment: Alignment.center,
+      overflow: Overflow.visible,
+      children: <Widget>[
+        Container(
+          height: outerSize,
+          width: outerSize,
+          padding: EdgeInsets.all(8),
+          child: Icon(
+            Icons.shopping_basket,
+            size: 34,
+            color: widget.color ?? colorScheme.secondary,
+          ),
+        ),
+        if (widget.value == 0 || widget.value == null)
+          Container()
+        else
+          Positioned(
+            left: left,
+            bottom: left,
+            child: ScaleTransition(
+              scale: bounceAnimation,
+              child: Container(
+                height: smallSize,
+                width: smallSize,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: colorScheme.secondaryVariant,
+                  shape: BoxShape.circle,
+                ),
+                child: AutoSizeText(
+                  '${widget.value}',
+                  style: textTheme.headline6.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: colorScheme.primary,
+                  ),
                 ),
               ),
-              !snapshot.hasData || snapshot.data == 0
-                  ? Container()
-                  : Positioned(
-                      left: left,
-                      bottom: left,
-                      child: Container(
-                        height: smallSize,
-                        width: smallSize,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: colorScheme.secondaryVariant,
-                          shape: BoxShape.circle,
-                        ),
-                        child: AutoSizeText(
-                          '${snapshot.data}',
-                          style: textTheme.bodyText1.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: colorScheme.primary,
-                          ),
-                        ),
-                      ),
-                    ),
-            ],
+            ),
           ),
-        );
-      },
+      ],
     );
   }
 }
