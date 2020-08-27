@@ -46,33 +46,35 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   Stream<CartState> _mapAddToCartToState(AddToCart event) async* {
     if (state is CartLoaded) {
       addToCart(event.plant);
-      print(_plantsInCart);
 
       List<Plant> plants = List<Plant>.from((state as CartLoaded).plants)
         ..add(event.plant);
       availaiblePlants.addAll(plants);
 
       Map<int, int> thePlantsInCart = Map<int, int>.from(_plantsInCart);
+      print('After Add event: $thePlantsInCart');
 
       yield CartLoaded(plants, plantsInCart: thePlantsInCart);
 
-      await repository.insertCart(event.plant);
+      // await repository.insertCart(event.plant);
     }
   }
 
   Stream<CartState> _mapRemoveFromCartToState(RemoveFromCart event) async* {
     if (state is CartLoaded) {
       removeFromCart(event.plant);
-      print(_plantsInCart);
 
       List<Plant> plants = List<Plant>.from((state as CartLoaded).plants)
         ..remove(event.plant);
 
-      Map<int, int> thePlantsInCart = Map<int, int>.from(_plantsInCart);
+      Map<int, int> thePlantsInCart = Map<int, int>.from(_plantsInCart)
+        ..removeWhere((key, value) => key == event.plant.id);
+
+      print('After Remove event: $thePlantsInCart');
 
       yield CartLoaded(plants, plantsInCart: thePlantsInCart);
 
-      await repository.insertCart(event.plant);
+      // await repository.insertCart(event.plant);
     }
   }
 
