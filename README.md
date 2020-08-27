@@ -16,16 +16,10 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 # fruts
 
-![Screenshot_20200827-215013](https://user-images.githubusercontent.com/29507277/91495955-486b4100-e8b3-11ea-9e51-e274fa9c4053.jpg)
+![Screenshot_20200827-215022](https://user-images.githubusercontent.com/29507277/91496370-ea8b2900-e8b3-11ea-8b4c-19be27cfaf92.png)
+![Screenshot_20200827-215051](https://user-images.githubusercontent.com/29507277/91496373-ebbc5600-e8b3-11ea-80c1-cf7078e6fddc.png)
+![Screenshot_20200827-215101](https://user-images.githubusercontent.com/29507277/91496375-ec54ec80-e8b3-11ea-8f9e-2aee4965c015.png)
+![Screenshot_20200827-215124](https://user-images.githubusercontent.com/29507277/91496378-eced8300-e8b3-11ea-875f-892750f33911.png)
+![Screenshot_20200827-215131](https://user-images.githubusercontent.com/29507277/91496380-eced8300-e8b3-11ea-985b-51ccc93b7d2c.png)
+![Screenshot_20200827-215141](https://user-images.githubusercontent.com/29507277/91496381-ed861980-e8b3-11ea-85ad-fbfb3055f86c.png)
 
-![Screenshot_20200827-215022](https://user-images.githubusercontent.com/29507277/91496162-954f1780-e8b3-11ea-81b7-a62b0b97ee56.png)
-
-![Screenshot_20200827-215051](https://user-images.githubusercontent.com/29507277/91496164-96804480-e8b3-11ea-9132-68b20841fbd0.png)
-
-![Screenshot_20200827-215101](https://user-images.githubusercontent.com/29507277/91496168-9718db00-e8b3-11ea-8623-ac3f5d49ec6d.png)
-
-![Screenshot_20200827-215124](https://user-images.githubusercontent.com/29507277/91496170-9718db00-e8b3-11ea-950e-da48d26b95d0.png)
-
-![Screenshot_20200827-215131](https://user-images.githubusercontent.com/29507277/91496177-97b17180-e8b3-11ea-8876-b9caf48ae3d2.png)
-
-![Screenshot_20200827-215141](https://user-images.githubusercontent.com/29507277/91496181-984a0800-e8b3-11ea-9b3d-c26cc5f159be.png)
