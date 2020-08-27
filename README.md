@@ -1,6 +1,6 @@
 # fruts
 
-A new Flutter project.
+Fruts is a fruits and vegetables ordering application created using Flutter.
 
 ## Getting Started
 
