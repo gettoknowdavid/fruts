@@ -114,12 +114,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     return _plantsInCart.values.fold(0, (v, e) => v + e);
   }
 
-  double get subtotal {
-    return _plantsInCart.keys
-        .map((int id) => availaiblePlants[id].price * _plantsInCart[id])
-        .fold(0.0, (p, e) => p + e);
-  }
-
   @override
   Future<void> close() {
     cartQuantityController.close();

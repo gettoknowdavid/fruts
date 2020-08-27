@@ -19,7 +19,6 @@ class FrutsTheme {
     );
 
     return base.copyWith(
-      // platform: TargetPlatform.iOS,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: primary,
       canvasColor: Colors.transparent,
@@ -42,7 +41,9 @@ class FrutsTheme {
 }
 
 TextTheme _textTheme(TextTheme base) {
-  return base.copyWith().apply(fontFamily: 'ProductSans');
+  return base
+      .copyWith(headline6: base.headline6.copyWith(fontSize: 19))
+      .apply(fontFamily: 'ProductSans');
 }
 
 IconThemeData _iconTheme(IconThemeData base) {

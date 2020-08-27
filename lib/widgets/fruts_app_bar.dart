@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruts/widgets/cart_bag.dart';
 
 const double kAppBarHeight = kToolbarHeight * 1.6;
 const double kBottomBarHeight = kToolbarHeight * 0.8;
@@ -135,6 +134,4 @@ class _FrutsAppBarState extends State<FrutsAppBar> {
       ),
     );
   }
-
-  
 }

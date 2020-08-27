@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer' as developer;
 
 import 'package:fruts/screens/screens.dart';
 import 'package:fruts/src/blocs/navigation/index.dart';
@@ -8,8 +7,10 @@ import 'package:meta/meta.dart';
 
 @immutable
 abstract class NavigationEvent {
-  Stream<NavigationState> applyAsync(
-      {NavigationState currentState, NavigationBloc bloc});
+  Stream<NavigationState> applyAsync({
+    NavigationState currentState,
+    NavigationBloc bloc,
+  });
 }
 
 class UpdateNavigationEvent extends NavigationEvent {

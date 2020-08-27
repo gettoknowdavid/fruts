@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/screens/home_screen.dart';
 import 'package:fruts/src/blocs/plants/plants_bloc.dart';
 import 'package:fruts/src/blocs/tabs/tabs_bloc.dart';
 import 'package:fruts/theme.dart';

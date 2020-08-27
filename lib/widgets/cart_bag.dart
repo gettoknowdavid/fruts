@@ -35,7 +35,6 @@ class _CartBagState extends State<CartBag> with TickerProviderStateMixin {
         .forward()
         .whenComplete(() => controller.reverse())
         .whenComplete(() => controller.reset());
-    ;
   }
 
   @override
