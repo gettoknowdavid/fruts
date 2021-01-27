@@ -1,7 +1,5 @@
 # This is a generated file; do not edit or check into version control.
-path_provider=C:\\Code\\sdk\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-1.6.11\\
-path_provider_linux=C:\\Code\\sdk\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_linux-0.0.1+1\\
-path_provider_macos=C:\\Code\\sdk\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_macos-0.0.4+3\\
-shared_preferences=C:\\Code\\sdk\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.5.7+3\\
-shared_preferences_macos=C:\\Code\\sdk\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences_macos-0.0.1+10\\
-shared_preferences_web=C:\\Code\\sdk\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences_web-0.1.2+7\\
+path_provider=/Users/gmiwc/Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.27/
+path_provider_linux=/Users/gmiwc/Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+1/
+path_provider_macos=/Users/gmiwc/Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+3/
+path_provider_windows=/Users/gmiwc/Flutter/SDK/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+3/

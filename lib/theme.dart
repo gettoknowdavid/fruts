@@ -42,7 +42,7 @@ class FrutsTheme {
 
 TextTheme _textTheme(TextTheme base) {
   return base
-      .copyWith(headline6: base.headline6.copyWith(fontSize: 19))
+      .copyWith(headline6: base.headline6.copyWith(fontSize: 18))
       .apply(fontFamily: 'ProductSans');
 }
 
