@@ -1,10 +1,11 @@
-import 'package:fruts/core/data/crops.dart';
-import 'package:fruts/features/crop/data/data_sources/crop_local_data_source.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
-import 'package:fruts/core/errors/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:fruts/features/crop/domain/repositories/crop_repository.dart';
 import 'package:meta/meta.dart';
+
+import '../../../../core/data/crops.dart';
+import '../../../../core/errors/failures.dart';
+import '../../domain/entities/crop.dart';
+import '../../domain/repositories/crop_repository.dart';
+import '../data_sources/crop_local_data_source.dart';
 
 class CropRepositoryImplementation implements CropRepository {
   CropRepositoryImplementation({@required this.source});

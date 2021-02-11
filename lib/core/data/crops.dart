@@ -1,7 +1,7 @@
-import 'package:fruts/core/constants/enums/category.dart';
-import 'package:fruts/core/constants/enums/nutrition_type.dart';
-import 'package:fruts/core/utils/uuid.dart';
-import 'package:fruts/features/crop/data/models/crop_model.dart';
+import '../constants/enums/category.dart';
+import '../constants/enums/nutrition_type.dart';
+import '../utils/uuid.dart';
+import '../../features/crop/data/models/crop_model.dart';
 
 List<CropModel> allCropModels = <CropModel>[
   // Exotics

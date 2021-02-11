@@ -1,5 +1,5 @@
-import 'package:fruts/features/cart/domain/entities/cart.dart';
-import 'package:fruts/features/crop/data/models/crop_model.dart';
+import '../../domain/entities/cart.dart';
+import '../../../crop/data/models/crop_model.dart';
 
 abstract class CartLocalDataSource {
   Future<List<CropModel>> getAllCrops();

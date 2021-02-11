@@ -30,6 +30,7 @@ class FrutsTheme {
         hoverColor: secondary.withOpacity(0.7),
         colorScheme: colorScheme,
       ),
+      dividerTheme: DividerThemeData(indent: 36, endIndent: 36, thickness: 1),
       iconTheme: _iconTheme(base.iconTheme),
       accentIconTheme: _iconTheme(base.accentIconTheme),
       primaryIconTheme: _iconTheme(base.primaryIconTheme),

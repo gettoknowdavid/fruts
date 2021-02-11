@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/core/constants/enums/category.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
-import 'package:fruts/features/crop/presentation/blocs/tabs/tabs_bloc.dart';
-import 'package:fruts/features/crop/presentation/widgets/assymetric_view.dart';
-import 'package:fruts/features/crop/presentation/widgets/featured_widget.dart';
+import '../../../../core/constants/enums/category.dart';
+import '../../domain/entities/crop.dart';
+import '../blocs/tabs/tabs_bloc.dart';
+import 'assymetric_view.dart';
+import 'featured_widget.dart';
 
 class HomeTabViews extends StatelessWidget {
   final TabController tabController;

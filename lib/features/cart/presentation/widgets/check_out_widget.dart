@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/core/constants/enums/screen_enum.dart';
-import 'package:fruts/core/presentation/blocs/navigation/navigation_bloc.dart';
-import 'package:fruts/core/presentation/widgets/cost_widget.dart';
-import 'package:fruts/core/presentation/widgets/fade_page_route.dart';
-import 'package:fruts/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:fruts/features/cart/presentation/pages/check_out_page.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
+import '../../../../core/constants/enums/screen_enum.dart';
+import '../../../../core/presentation/blocs/navigation/navigation_bloc.dart';
+import '../../../../core/presentation/widgets/cost_widget.dart';
+import '../../../../core/presentation/widgets/fade_page_route.dart';
+import '../bloc/cart_bloc.dart';
+import '../pages/check_out_page.dart';
+import '../../../crop/domain/entities/crop.dart';
 
 class CheckOutWidget extends StatelessWidget {
-  const CheckOutWidget({
-    Key key,
-  }) : super(key: key);
+  const CheckOutWidget({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

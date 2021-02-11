@@ -1,7 +1,8 @@
-import 'package:fruts/core/constants/enums/category.dart';
-import 'package:fruts/core/constants/enums/nutrition_type.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import '../../../../core/constants/enums/category.dart';
+import '../../../../core/constants/enums/nutrition_type.dart';
+import '../../domain/entities/crop.dart';
 
 part 'crop_model.g.dart';
 

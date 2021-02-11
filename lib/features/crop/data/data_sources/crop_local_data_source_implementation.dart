@@ -1,5 +1,5 @@
-import 'package:fruts/features/crop/data/data_sources/crop_local_data_source.dart';
-import 'package:fruts/features/crop/data/models/crop_model.dart';
+import 'crop_local_data_source.dart';
+import '../models/crop_model.dart';
 import 'package:meta/meta.dart';
 import 'package:sembast/sembast.dart';
 

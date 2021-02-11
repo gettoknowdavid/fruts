@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/core/constants/enums/screen_enum.dart';
-import 'package:fruts/core/presentation/blocs/navigation/navigation_bloc.dart';
-import 'package:fruts/core/presentation/widgets/fruts_bottom_navigation.dart';
 
+import '../../constants/enums/screen_enum.dart';
+import '../blocs/navigation/navigation_bloc.dart';
 import 'app_background.dart';
+import 'fruts_bottom_navigation.dart';
 
 class ScreenController extends StatelessWidget {
   @override
@@ -41,7 +41,7 @@ class ScreenController extends StatelessWidget {
   Widget _icons(ScreenEnum screenEnum) {
     switch (screenEnum) {
       case ScreenEnum.cart:
-        return Icon(Icons.shopping_basket);
+        return Icon(Icons.shopping_bag);
         break;
       case ScreenEnum.home:
         return Icon(Icons.home);

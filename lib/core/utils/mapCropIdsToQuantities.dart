@@ -1,4 +1,4 @@
-import 'package:fruts/features/crop/domain/entities/crop.dart';
+import '../../features/crop/domain/entities/crop.dart';
 
 Map<int, int> mapCropIdsToQuantities(List<Crop> crops) {
   return Map.fromIterable(

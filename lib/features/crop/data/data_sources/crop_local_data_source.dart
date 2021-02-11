@@ -1,4 +1,4 @@
-import 'package:fruts/features/crop/data/models/crop_model.dart';
+import '../models/crop_model.dart';
 
 abstract class CropLocalDataSource {
   Future<List<CropModel>> getAllCrops();

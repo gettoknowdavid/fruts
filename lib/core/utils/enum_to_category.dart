@@ -1,4 +1,4 @@
-import './enum_to_string.dart';
+import 'enum_to_string.dart';
 
 String enumFormatter(dynamic input) {
   final cat = enumToString(input);

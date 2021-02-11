@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/core/presentation/widgets/fade_page_route.dart';
-import 'package:fruts/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
-import 'package:fruts/features/crop/presentation/pages/details_page.dart';
+import '../../../../core/presentation/widgets/fade_page_route.dart';
+import '../../../cart/presentation/bloc/cart_bloc.dart';
+import '../../domain/entities/crop.dart';
+import '../pages/details_page.dart';
 import 'package:intl/intl.dart';
 
 class CropCard extends StatelessWidget {

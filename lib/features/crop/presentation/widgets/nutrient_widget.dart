@@ -2,9 +2,10 @@ import 'dart:math';
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:fruts/core/constants/enums/nutrition_type.dart';
-import 'package:fruts/core/utils/enum_to_category.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
+
+import '../../../../core/constants/enums/nutrition_type.dart';
+import '../../../../core/utils/enum_to_category.dart';
+import '../../domain/entities/crop.dart';
 
 class NutritionWidget extends StatelessWidget {
   const NutritionWidget({

@@ -1,8 +1,9 @@
-import 'package:fruts/features/cart/data/data_sources/cart_local_data_source.dart';
-import 'package:fruts/features/cart/domain/entities/cart.dart';
-import 'package:fruts/features/crop/data/models/crop_model.dart';
 import 'package:meta/meta.dart';
 import 'package:sembast/sembast.dart';
+
+import '../../../crop/data/models/crop_model.dart';
+import '../../domain/entities/cart.dart';
+import 'cart_local_data_source.dart';
 
 class CartLocalDataSourceImplementation implements CartLocalDataSource {
   CartLocalDataSourceImplementation({
