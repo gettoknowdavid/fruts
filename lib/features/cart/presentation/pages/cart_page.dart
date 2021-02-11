@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/core/presentation/widgets/app_background.dart';
-import 'package:fruts/core/presentation/widgets/custom_back_button.dart';
-import 'package:fruts/core/presentation/widgets/fruts_app_bar.dart';
-import 'package:fruts/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:fruts/features/cart/presentation/widgets/cart_item.dart';
-import 'package:fruts/features/cart/presentation/widgets/check_out_widget.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
+import '../../../../core/presentation/widgets/app_background.dart';
+import '../../../../core/presentation/widgets/custom_back_button.dart';
+import '../../../../core/presentation/widgets/fruts_app_bar.dart';
+import '../bloc/cart_bloc.dart';
+import '../widgets/cart_item.dart';
+import '../widgets/check_out_widget.dart';
+import '../../../crop/domain/entities/crop.dart';
 
 class CartPage extends StatefulWidget {
   final bool showBackButton;

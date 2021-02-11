@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruts/theme.dart';
+import 'theme.dart';
 import 'core/presentation/widgets/screen_controller.dart';
 
 class App extends StatelessWidget {

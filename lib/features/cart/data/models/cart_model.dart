@@ -1,5 +1,5 @@
-import 'package:fruts/features/cart/domain/entities/cart.dart';
-import 'package:fruts/features/crop/data/models/crop_model.dart';
+import '../../domain/entities/cart.dart';
+import '../../../crop/data/models/crop_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 

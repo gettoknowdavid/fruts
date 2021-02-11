@@ -1,6 +1,5 @@
-import 'package:fruts/core/utils/uuid.dart';
-import 'package:fruts/features/crop/data/models/crop_model.dart';
-
+import '../../features/crop/data/models/crop_model.dart';
+import '../utils/uuid.dart';
 import 'enums/category.dart';
 import 'enums/nutrition_type.dart';
 

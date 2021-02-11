@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:fruts/core/errors/failures.dart';
-import 'package:fruts/core/use_cases/no_params.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
-import 'package:fruts/features/crop/domain/use_cases/get_all_crops.dart';
+import '../../../../../core/errors/failures.dart';
+import '../../../../../core/use_cases/no_params.dart';
+import '../../../domain/entities/crop.dart';
+import '../../../domain/use_cases/get_all_crops.dart';
 import 'package:meta/meta.dart';
 
 part 'crops_event.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
+import '../../domain/entities/crop.dart';
 import 'package:intl/intl.dart';
 
 class CropCost extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
+import '../bloc/cart_bloc.dart';
+import '../../../crop/domain/entities/crop.dart';
 
 class AddToCartButton extends StatefulWidget {
   const AddToCartButton({

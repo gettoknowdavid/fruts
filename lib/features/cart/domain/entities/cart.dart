@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:fruts/features/crop/data/models/crop_model.dart';
+import '../../../crop/data/models/crop_model.dart';
 import 'package:meta/meta.dart';
 
 class Cart extends Equatable {

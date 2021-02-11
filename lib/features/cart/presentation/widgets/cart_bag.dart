@@ -61,7 +61,7 @@ class _CartBagState extends State<CartBag> with TickerProviderStateMixin {
           // width: outerSize,
           padding: EdgeInsets.all(10),
           child: Icon(
-            Icons.shopping_basket,
+            Icons.shopping_bag,
             size: 34,
             color: widget.color ?? colorScheme.secondary,
           ),

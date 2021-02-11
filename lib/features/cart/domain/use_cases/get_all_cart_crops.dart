@@ -1,9 +1,9 @@
-import 'package:fruts/core/errors/failures.dart';
+import '../../../../core/errors/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:fruts/core/use_cases/no_params.dart';
-import 'package:fruts/core/use_cases/use_case.dart';
-import 'package:fruts/features/cart/domain/entities/cart.dart';
-import 'package:fruts/features/cart/domain/repositories/cart_repository.dart';
+import '../../../../core/use_cases/no_params.dart';
+import '../../../../core/use_cases/use_case.dart';
+import '../entities/cart.dart';
+import '../repositories/cart_repository.dart';
 import 'package:meta/meta.dart';
 
 class GetAllCartCrops implements UseCase<Cart, NoParams> {

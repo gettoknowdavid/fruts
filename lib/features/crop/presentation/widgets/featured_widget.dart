@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class FeaturedWidget extends StatelessWidget {
   const FeaturedWidget({Key key}) : super(key: key);
 

@@ -1,12 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/core/presentation/widgets/cost_widget.dart';
-import 'package:fruts/core/presentation/widgets/fade_page_route.dart';
-import 'package:fruts/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:fruts/features/cart/presentation/widgets/add_remove_widget.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
-import 'package:fruts/features/crop/presentation/pages/details_page.dart';
+import '../../../../core/presentation/widgets/cost_widget.dart';
+import '../../../../core/presentation/widgets/fade_page_route.dart';
+import '../bloc/cart_bloc.dart';
+import 'add_remove_widget.dart';
+import '../../../crop/domain/entities/crop.dart';
+import '../../../crop/presentation/pages/details_page.dart';
 
 class CartItem extends StatefulWidget {
   final Crop crop;

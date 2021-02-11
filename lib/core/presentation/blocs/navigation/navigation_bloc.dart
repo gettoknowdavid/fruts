@@ -3,8 +3,9 @@ import 'dart:developer' as developer;
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:fruts/core/constants/enums/screen_enum.dart';
-import 'package:fruts/core/presentation/widgets/screens.dart';
+
+import '../../../constants/enums/screen_enum.dart';
+import '../../widgets/screens.dart';
 
 part 'navigation_event.dart';
 part 'navigation_state.dart';

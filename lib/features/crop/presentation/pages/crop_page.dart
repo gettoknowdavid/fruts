@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fruts/core/constants/enums/category.dart';
-import 'package:fruts/core/presentation/widgets/app_background.dart';
-import 'package:fruts/core/presentation/widgets/fruts_app_bar.dart';
-import 'package:fruts/core/utils/enum_to_string.dart';
-import 'package:fruts/features/crop/presentation/widgets/crop_tab_views.dart';
+import '../../../../core/constants/enums/category.dart';
+import '../../../../core/presentation/widgets/app_background.dart';
+import '../../../../core/presentation/widgets/fruts_app_bar.dart';
+import '../../../../core/utils/enum_to_string.dart';
+import '../widgets/crop_tab_views.dart';
 
 class CropsPage extends StatefulWidget {
   @override

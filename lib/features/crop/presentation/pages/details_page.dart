@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruts/core/presentation/widgets/app_background.dart';
-import 'package:fruts/core/presentation/widgets/custom_back_button.dart';
-import 'package:fruts/core/presentation/widgets/fade_page_route.dart';
-import 'package:fruts/core/presentation/widgets/fruts_app_bar.dart';
-import 'package:fruts/core/utils/enum_to_category.dart';
-import 'package:fruts/features/cart/presentation/bloc/cart_bloc.dart';
-import 'package:fruts/features/cart/presentation/pages/cart_page.dart';
-import 'package:fruts/features/cart/presentation/widgets/add_to_cart_button.dart';
-import 'package:fruts/features/cart/presentation/widgets/cart_bag.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
-import 'package:fruts/features/crop/presentation/widgets/crop_cost.dart';
-import 'package:fruts/features/crop/presentation/widgets/nutrient_widget.dart';
+import '../../../../core/presentation/widgets/app_background.dart';
+import '../../../../core/presentation/widgets/custom_back_button.dart';
+import '../../../../core/presentation/widgets/fade_page_route.dart';
+import '../../../../core/presentation/widgets/fruts_app_bar.dart';
+import '../../../../core/utils/enum_to_category.dart';
+import '../../../cart/presentation/bloc/cart_bloc.dart';
+import '../../../cart/presentation/pages/cart_page.dart';
+import '../../../cart/presentation/widgets/add_to_cart_button.dart';
+import '../../../cart/presentation/widgets/cart_bag.dart';
+import '../../domain/entities/crop.dart';
+import '../widgets/crop_cost.dart';
+import '../widgets/nutrient_widget.dart';
 
 class _TopChild extends StatelessWidget {
   const _TopChild({Key key, @required this.crop}) : super(key: key);
@@ -194,7 +194,7 @@ class _DetailsScreenState extends State<DetailsScreen>
 
     controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 350),
+      duration: Duration(milliseconds: 0),
     );
 
     animateTopChild = Tween<double>(begin: 754, end: 0.0).animate(

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:fruts/core/constants/enums/category.dart';
-import 'package:fruts/core/constants/enums/nutrition_type.dart';
-import 'package:fruts/core/utils/uuid.dart';
+import '../../../../core/constants/enums/category.dart';
+import '../../../../core/constants/enums/nutrition_type.dart';
+import '../../../../core/utils/uuid.dart';
 
 
 class Crop extends Equatable {

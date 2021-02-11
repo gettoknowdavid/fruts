@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruts/features/crop/domain/entities/crop.dart';
-import 'package:fruts/features/crop/presentation/widgets/crop_card.dart';
+import '../../domain/entities/crop.dart';
+import 'crop_card.dart';
 
 class AssymetricView extends StatelessWidget {
   const AssymetricView({Key key, this.crops}) : super(key: key);
